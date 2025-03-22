@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+    html {
+        font-family: inter, system-ui, sans-serif;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    animation: transitionIn 0.85s;
+}
+
+main {
+    flex: 1;
+}
+
+.tran {
+    transition: 0.3s linear;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/********** Custom Scrollbar ************/
+
+/* Light mode Scrollbar */
+
+::-webkit-scrollbar {
+    width: 4px !important;
+    height: 4px !important;
+}
+
+::-webkit-scrollbar-track {
+    background: #ffffff !important;
+    border-radius: 10px !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d8dcff !important;
+    border-radius: 10px !important;
+    transition: all !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b6bada !important;
+}
+
+/* Dark mode Scrollbar */
+
+.dark ::-webkit-scrollbar {
+    width: 4px !important;
+    height: 4px !important;
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #16192e !important;
+    border-radius: 10px !important;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #363e61 !important;
+    border-radius: 10px !important;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #363e61b4 !important;
+}
+
+/****** Hide Arrows From Input Number *******/
+
+/* Chrome, Safari, Edge, Opera */
+
+#monthInput::-webkit-outer-spin-button,
+#monthInput::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/* Firefox */
+
+#monthInput[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Sign in page */
+
+.signInBodyColor {
+    background-image: linear-gradient(to right, #efeeff, #e7e6fe);
+}
+
+.dark .signInBodyColor {
+    background-image: linear-gradient(to right, #12121f, #12121f);
+}
+
+.signInSectionBg {
+    background-image: url("../assets/images/bg/signInImg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.dark .signInSectionBg {
+    background-image: url("../assets/images/bg/signInImgDark.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% 100%;
+}
+
+/* New Connection page */
+
+/* Tab */
+
+.package-tab-button.active {
+    background: #f2f2ff;
+    color: #7674f8;
+    border-bottom: 1px solid #7674f8;
+}
+
+.dark .package-tab-button.active {
+    background: #303052;
+    color: #7674f8;
+    border-bottom: 1px solid #7674f8;
+}
+
+select {
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    background: url("../assets/images/selector-arrow.png") no-repeat;
+    background-position: calc(100% - 0.75rem) !important;
+    padding-right: 2rem !important;
+}
