@@ -1,0 +1,1326 @@
+ <html>
+    <head>
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="maXim ISP Billing and Radius">
+        <meta name="keywords" content="ISP Billing,Radius,ISP ERP, ISP Portal">
+        <link rel="shortcut icon" sizes="16x16" href="/logo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Maestro Solutions Ltd.">
+        
+        <title> SK Network</title>
+        <link rel="shortcut icon" sizes="16x16" href="/logo.png">
+       
+     <!-- chartist CSS -->
+         
+         
+         <link href="../resources/mx-theme/assets/fonts/Inter/inter.css" rel="stylesheet" />
+         <link rel="stylesheet" href="../resources/mx-theme/css/input.css">
+         <link rel="stylesheet" href="../resources/mx-theme/css/tailwind.css">
+         <link rel="stylesheet" href="../resources/mx-theme/css/custom.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+         
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <!-- <link rel="stylesheet" href="../resources/newCustom/fontawesome/css/all.min.css"> -->
+    
+        
+        <!-- ============================================================== -->
+        <!-- All Jquery -->
+        <!-- ============================================================== -->
+    
+        
+        <style>
+            #navDropdown {
+                max-height: 0;
+                transition: max-height 0.3s ease-in-out;
+            }
+    
+            #navDropdown.active {
+                max-height: 1000px;
+            }
+            
+            input[type="text"], input[type="password"]{
+                padding-left : 0.75rem;
+                border-top-left-radius : 0.75rem;
+                border-bottom-left-radius : 0.75rem;
+            }
+            .svg-ico{
+                margin-left: 1.25rem;
+                margin-right: 1.25rem;
+            }
+        </style>
+    
+    </head>
+    
+    <!-- NEW UPDATE  -->
+    <body class="signInBodyColor flex min-h-svh flex-col">
+        <!-- Navbar -->
+        <header id="pub-header" class="sticky top-0 bg-white dark:bg-[#141628] flex items-center justify-between gap-8 md:px-12 px-5 py-4">
+            <!-- Logo -->
+            <a href="#" class="block">
+                <img src="../uploadedfile/F9D08452360B5F252C2171C15B74A0D1_E36A87AE31B9D7867C8BDE68E986ABC6_dark1 (1).png" style="max-width: 300px; max-height: 60px; min-width=200px; " alt="SK SelfCare" class="dark:hidden" />
+                <img src="../uploadedfile/F9D08452360B5F252C2171C15B74A0D1_E36A87AE31B9D7867C8BDE68E986ABC6_dark1 (1).png" style="max-width: 300px; max-height: 60px; min-width=200px; " alt="SK SelfCare" class="hidden dark:block" />
+            </a>
+            <div class="flex items-center gap-5">
+                <div class="tran size-5 cursor-pointer lg:static">
+                    <svg class="self-dark tran stroke-[#7674F8]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"
+                        fill="none">
+                        <path
+                            d="M17 9.72072C16.8599 11.237 16.2908 12.682 15.3594 13.8867C14.428 15.0914 13.1728 16.0059 11.7406 16.5232C10.3084 17.0405 8.7585 17.1392 7.27225 16.8078C5.786 16.4764 4.42487 15.7286 3.34813 14.6519C2.27138 13.5751 1.52356 12.214 1.19216 10.7277C0.860763 9.2415 0.959498 7.6916 1.47681 6.25942C1.99413 4.82724 2.90862 3.572 4.1133 2.64059C5.31797 1.70918 6.76299 1.14012 8.27928 1C7.39154 2.20101 6.96435 3.68075 7.07542 5.1701C7.18648 6.65945 7.82842 8.05947 8.88447 9.11553C9.94053 10.1716 11.3405 10.8135 12.8299 10.9246C14.3192 11.0356 15.799 10.6085 17 9.72072Z"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <svg class="self-light tran stroke-[#A2A0FF]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"
+                        fill="none">
+                        <path
+                            d="M9 1V2.45455M9 15.5455V17M3.34162 3.3418L4.37435 4.37452M13.6257 13.6254L14.6584 14.6582M1 9H2.45455M15.5455 9H17M3.34162 14.6582L4.37435 13.6254M13.6257 4.37452L14.6584 3.3418M12.6364 9C12.6364 11.0083 11.0083 12.6364 9 12.6364C6.99169 12.6364 5.36364 11.0083 5.36364 9C5.36364 6.99169 6.99169 5.36364 9 5.36364C11.0083 5.36364 12.6364 6.99169 12.6364 9Z"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                
+                <div class="md:flex hidden items-center gap-5 text-sm text-[#4A535F] dark:text-[#BAC6CD]">
+                    
+                        <a href="https://sknetwork.net/package.html" class="hover:text-[#7674F8] transition-all duration-300">Packages</a>
+                    
+                    
+                        <a href="https://sknetwork.net/contact.html" class="hover:text-[#7674F8] transition-all duration-300">Send Me Massage</a>
+                    
+                    
+                        <a href="https://sknetwork.net/contact.html" class="font-semibold text-[#7674F8] transition-all duration-300 px-3 py-2 bg-[#f1f1fe] dark:bg-[#232339] rounded-md">Contact
+                        Us</a>
+                     
+                </div>
+    
+                <div>
+                    <!-- Dropdown Btn -->
+                    <button id="dropdownBtn" class="md:hidden block">
+                        <svg id="openHamburger" class="fill-[#4A535F] dark:fill-[#BAC6CD]"
+                            xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="22" height="22" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512"
+                            xml:space="preserve">
+                            <g>
+                                <path
+                                    d="M21 7H3c-.6 0-1-.4-1-1s.4-1 1-1h18c.6 0 1 .4 1 1s-.4 1-1 1zM21 13H3c-.6 0-1-.4-1-1s.4-1 1-1h18c.6 0 1 .4 1 1s-.4 1-1 1zM21 19H3c-.6 0-1-.4-1-1s.4-1 1-1h18c.6 0 1 .4 1 1s-.4 1-1 1z"
+                                    opacity="1" data-original="#000000"></path>
+                            </g>
+                        </svg>
+                        <svg id="closeHamburger" class="fill-[#4A535F] dark:fill-[#BAC6CD] hidden"
+                            xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="22" height="22" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512"
+                            xml:space="preserve">
+                            <g>
+                                <path fill-rule="evenodd"
+                                    d="M5 17.586a1 1 0 1 0 1.415 1.415L12 13.414 17.586 19A1 1 0 0 0 19 17.586L13.414 12 19 6.414A1 1 0 0 0 17.585 5L12 10.586 6.414 5A1 1 0 0 0 5 6.414L10.586 12z"
+                                    clip-rule="evenodd" opacity="1" data-original="#000000" class=""></path>
+                            </g>
+                        </svg>
+                    </button>
+                    <!-- Dropdown content -->
+                    <div id="navDropdown"
+                        class="z-10 w-52 absolute overflow-hidden top-[90%] right-10 bg-white dark:bg-[#1C2037] rounded-lg shadow-xl">
+                        <div
+                            class="flex md:flex-row flex-col md:items-center items-start gap-5 text-sm text-[#4A535F] dark:text-[#BAC6CD] p-4">
+                            
+                                <a href="https://sknetwork.net/package.html" class="hover:text-[#7674F8] transition-all duration-300">Packages</a>
+                            
+                            
+                                <a href="https://sknetwork.net/register.html" class="hover:text-[#7674F8] transition-all duration-300">New Connection</a>
+                            
+                            
+                                <a href="https://sknetwork.net/contact.html"
+                                class="font-semibold text-[#7674F8] text-center transition-all duration-300 px-3 py-2 bg-[#f1f1fe] dark:bg-[#232339] rounded-md w-full">Contact
+                                Us</a>
+                             
+                             
+                            
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+    
+    <main class="flex flex-col flex-auto items-center justify-center m-0 w-full p-5" >
+                
+        <h1 class="text-[#172935] dark:text-[#BAC6CD] font-semibold lg:text-2xl md:text-xl text-lg mb-6">New Connection
+            Request</h1>
+        <div
+            class="lg:w-1/2 md:w-4/5 w-full bg-white dark:bg-[#1a1a2c] border-[2px] border-[#dddcfe] dark:border-gray-800 mx-auto rounded-xl shadow-xl shadow-[#deddfe] dark:shadow-none">
+            <!-- Tabs onclick="newConnectionInfoTab('addressInfo')" onclick="newConnectionInfoTab('personalDetails')" -->
+            <div class="flex items-center w-full">
+                <button type="button" data-tab="addressInfo" id="addressInfo-btn" 
+                    class="active details-wiz package-tab-button transition-all duration-300 border-b border-b-[#f1f1fe] dark:border-b-gray-700 w-full md:px-5 px-2 h-14 md:text-base text-sm text-[#4A535F] dark:text-[#BAC6CD] font-semibold uppercase rounded-tl-xl">Address
+                    Info</button>
+                <button type="button" data-tab="personalDetails" id="personalDetails-btn" 
+                    class="details-wiz package-tab-button transition-all duration-300 border-b border-b-[#f1f1fe] dark:border-b-gray-700 w-full md:px-5 px-2 h-14 md:text-base text-sm text-[#4A535F] dark:text-[#BAC6CD] font-semibold uppercase rounded-tr-xl">Personal
+                    Details</button>
+            </div>
+            <!-- Tab Contents -->
+            <div>
+                <form id="msform" name="fr_merchant" onSubmit="return checkForm();" action="https://formspree.io/f/xwplokqd"  method="post">
+                    <div id="addressInfo" class="package-tab-content md:p-8 p-5">
+                    <div class="grid md:grid-cols-2 grid-cols-1 gap-5 mb-5">
+                        <div>
+                            <label for="package"
+                                class="text-sm text-[#4A535F] dark:text-[#909ca3] font-medium">Select your Package <span
+                                    class="text-[#FF434E]">*</span></label>
+                            <select type="text" name='package' id='package'
+                                class="w-full outline-none md:px-5 px-2 py-4 text-[#A2A5AE] text-sm border border-[#ebebf3] dark:border-gray-700 rounded-xl mt-2 bg-transparent dark:bg-[#232339]"
+                                required>
+                                
+                                    
+                                        
+                                            
+                                                <option value="0" selected>Please select your Package </option>
+                                            
+                                                    
+                                                                                                                        
+                                                
+                                                
+                                                        <option value="146" >Silver+ (20Mbps) 500tk (<span class="disabled">500 BDT</span>) </option>
+                                                
+                                                        <!--  -->
+                                                                                                                      
+                                                
+                                                
+                                                        <option value="148" >Platinum+ (30Mbps) 600tk (<span class="disabled">600 BDT</span>) </option>
+                                                
+                                                        <!--  -->
+                                                                                                                      
+                                                
+                                                
+                                                        <option value="150" >Sapphire+ (40Mbps) 800tk (<span class="disabled">800 BDT</span>) </option>
+                                                
+                                                        <!--  -->
+                                                                                                                      
+                                                
+                                                
+                                                        <option value="152" >Sky+ (50Mbps) 1000tk (<span class="disabled">1,000 BDT</span>) </option>
+                                                
+                                                        <!--  -->
+                                                                                                                      
+                                                
+                                                
+                                                        <option value="147" >Gold+ (60Mbps) 1200tk (<span class="disabled">1,200 BDT</span>) </option>
+                                                
+                                                        <!--  -->
+                                                                                                                      
+                                                
+                                                
+                                                        <option value="149" >Diamond+ (80Mbps) 1500tk (<span class="disabled">1,500 BDT</span>) </option>
+                                                
+                                                        <!--  -->
+                                                                                                                      
+                                                
+                                                
+                                                        <option value="151" >Star+ (100Mbps) 2,000tk (<span class="disabled">2,000 BDT</span>) </option>
+                                                
+                                                        <!--  -->
+                                                                                                              
+                                       
+    
+                                       
+                                   
+                            </select>
+                            <small class="text-danger" id="packId-error" style="display: none;">  </small>
+                        </div>
+                        <div>
+                            <label for="location"
+                                class="text-sm text-[#4A535F] dark:text-[#909ca3] font-medium">Select your Location
+                                <span class="text-[#FF434E]">*</span></label>
+                            <select type="text" name='location' id='location'
+                                class="w-full outline-none md:px-5 px-2 py-4 text-[#A2A5AE] text-sm border border-[#ebebf3] dark:border-gray-700 rounded-xl mt-2 bg-transparent dark:bg-[#232339]"
+                                required>
+                                
+                                    <option value="0" selected>Please select Location</option>
+                                
+                                
+                                    
+                                    
+                                        <option value="48">Mohammadpur, <span class="disabled">Mohammadpur,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="57">Kadamtali, <span class="disabled">Kadamtoli,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="45">Adabor, <span class="disabled">Adabor,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="46">Badda, <span class="disabled">Badda,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="49">Cantonment, <span class="disabled">Cantonment,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="52">Demra, <span class="disabled">Demra,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="5">Dhanmondi, <span class="disabled">Dhanmondi,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="54">Gulshan, <span class="disabled">Gulshan,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="55">Hazaribagh, <span class="disabled">Hazaribag,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="58">Kafrul, <span class="disabled">Kafrul,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="61">Kamrangirchar, <span class="disabled">Kamrangirchar,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="62">Khilgaon, <span class="disabled">Khilgaon,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="63">Khilkhet, <span class="disabled">Khilkhet,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="64">Kotwali, <span class="disabled">Kotwali,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="65">Lalbagh, <span class="disabled">Lalbag,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="25">Mirpur, <span class="disabled">Mirpur,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="66">Mirpur Model Thana, <span class="disabled">Mirpur,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="67">Mohammadpur, <span class="disabled">Mohammadpur,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="68">Motijheel, <span class="disabled">Motijheel,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="69">New Market, <span class="disabled">New Market,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="70">Pallabi, <span class="disabled">Pallabi,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="71">Paltan, <span class="disabled">Paltan,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="72">Ramna, <span class="disabled">Ramna,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="76">Shahbag, <span class="disabled">Shahbag,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="78">Shyampur, <span class="disabled">Shampur,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="81">Tejgaon, <span class="disabled">Tejgaon,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="80">Tejgaon Industrial Area, <span class="disabled">Tejgaon I/A,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="82">Turag, <span class="disabled">Turagh,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="83">Uttar Khan, <span class="disabled">Uttarkhan,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="75">Shah Ali, <span class="disabled">Shah Ali,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="47">Bangshal, <span class="disabled">Bangshal,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="50">Chowk Bazar, <span class="disabled">Chackbazar,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="51">Darus Salam, <span class="disabled">Darussalam,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="53">Gendaria, <span class="disabled">Gandaria,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="56">Jatrabari, <span class="disabled">Jatrabari,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="60">Kalabagan, <span class="disabled">Kalabagan,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="73">Rampura, <span class="disabled">Rampura,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="74">Sabujbagh, <span class="disabled">Sabujbag,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="77">Sher-e-Bangla Nagar, <span class="disabled">Sher-e-Bangla Nagar,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="79">Sutrapur, <span class="disabled">Sutrapur,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="6">Uttara, <span class="disabled">Uttara West,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="84">Vatara, <span class="disabled">Vatara,Dhaka</span> </option>
+                                    
+                                
+                                    
+                                    
+                                        <option value="85">Wari, <span class="disabled">Wari,Dhaka</span> </option>
+                                    
+                                
+                            </select>
+                            <small class="text-danger" id="location-error" style="display: none;"></small>
+                        </div>
+                        <div>
+                            <label for="flatNo" class="text-sm text-[#4A535F] dark:text-[#909ca3] font-medium">Flat/Apt.
+                                No <span class="text-[#FF434E]">*</span></label>
+                                <span style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: small; font-style: normal; font-weight: normal; letter-spacing: normal; line-height: 19.5px; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; display: inline ! important; float: none; background-color: rgb(255, 255, 255);">
+                                &#2475;&#2509;&#2482;&#2509;&#2479;&#2494;&#2463; / &#2437;&#2509;&#2479;&#2494;&#2474;&#2494;&#2480;&#2509;&#2463;&#2478;&#2503;&#2472;&#2509;&#2463; &#2472;&#2478;&#2509;&#2476;&#2480;
+                                </span>
+                            <input type="text" id="apt" name="apt" 
+                                class="w-full outline-none px-5 py-4 text-[#A2A5AE] text-sm border border-[#ebebf3] dark:border-gray-700 rounded-xl mt-2 bg-transparent dark:bg-[#232339]"
+                                required />
+                                
+                                <small class="text-danger" id="apt-error" style="display: none;"></small>
+                        </div>
+                        <div>
+                            <label for="houseNo" class="text-sm text-[#4A535F] dark:text-[#909ca3] font-medium">House No
+                                <span class="text-[#FF434E]">*</span></label>
+                                <span style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: small; font-style: normal; font-weight: normal; letter-spacing: normal; line-height: 19.5px; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; display: inline ! important; float: none; background-color: rgb(255, 255, 255);">
+                                &#2476;&#2494;&#2488;&#2494; &#2472;&#2434;.
+                                </span>
+                            <input type="text" id="house" name="house"
+                                class="w-full outline-none px-5 py-4 text-[#A2A5AE] text-sm border border-[#ebebf3] dark:border-gray-700 rounded-xl mt-2 bg-transparent dark:bg-[#232339]"
+                                required />
+                                <small class="text-danger" id="house-error" style="display: none;"></small>
+                        </div>
+                        <div>
+                            <label for="roadNo" class="text-sm text-[#4A535F] dark:text-[#909ca3] font-medium">Road No
+                                <span class="text-[#FF434E]">*</span></label>
+                                <span style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: small; font-style: normal; font-weight: normal; letter-spacing: normal; line-height: 19.5px; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; display: inline ! important; float: none; background-color: rgb(255, 255, 255);">
+                                    &#2480;&#2507;&#2465; &#2472;&#2434;.
+                                    </span>
+                            <input type="text" id="road" name="road"
+                                class="w-full outline-none px-5 py-4 text-[#A2A5AE] text-sm border border-[#ebebf3] dark:border-gray-700 rounded-xl mt-2 bg-transparent dark:bg-[#232339]"
+                                required />
+                                <small class="text-danger" id="road-error" style="display: none;"></small>
+                        </div>
+                        <div>
+                            <label for="area" class="text-sm text-[#4A535F] dark:text-[#909ca3] font-medium">Area <span
+                                    class="text-[#FF434E]">*</span></label>
+                                    
+                            <input type="text"  id="area" name="area" 
+                                class="w-full outline-none px-5 py-4 text-[#A2A5AE] text-sm border border-[#ebebf3] dark:border-gray-700 rounded-xl mt-2 bg-transparent dark:bg-[#232339]"
+                                required />
+                                <small class="text-danger" id="area-error" style="display: none;"></small>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="landmarkInfo"
+                            class="text-sm text-[#4A535F] dark:text-[#909ca3] font-medium">Landmark/Other info regarding
+                            your location:</label>
+                            <span style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: small; font-style: normal; font-weight: normal; letter-spacing: normal; line-height: 19.5px; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; display: inline ! important; float: none; background-color: rgb(255, 255, 255);">
+                            &#2438;&#2474;&#2472;&#2494;&#2480; &#2437;&#2476;&#2488;&#2509;&#2469;&#2494;&#2472; &#2488;&#2478;&#2509;&#2474;&#2480;&#2509;&#2453;&#2495;&#2468; &#2482;&#2509;&#2479;&#2494;&#2472;&#2509;&#2465;&#2478;&#2494;&#2480;&#2509;&#2453; / &#2437;&#2472;&#2509;&#2479;&#2494;&#2472;&#2509;&#2479; &#2468;&#2469;&#2509;&#2479;
+                            </span>
+                        <input type="text" name="landmark" id="landmark"
+                            class="w-full outline-none px-5 py-4 text-[#A2A5AE] text-sm border border-[#ebebf3] dark:border-gray-700 rounded-xl mt-2 bg-transparent dark:bg-[#232339]"
+                            placeholder="Eg: Banani Market" />
+                    </div>
+    
+                    <div class="flex justify-end">
+                        <button data-tab="personalDetails" id="personalDetails-btn"
+                            class="details-wiz next px-6 py-3 mt-6 border border-[#7674F8] text-[#7674F8] font-semibold rounded-xl active:scale-95 transition-all duration-300 flex items-center gap-1">
+                            Next
+                            <svg class="fill-[#7674F8]" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" x="0" y="0"
+                                viewBox="0 0 6.35 6.35" style="enable-background:new 0 0 512 512" xml:space="preserve">
+                                <g>
+                                    <path
+                                        d="M2.258 1.315a.265.265 0 0 0-.174.469L3.703 3.17l-1.62 1.386a.265.265 0 1 0 .345.4L4.28 3.373a.265.265 0 0 0 0-.403L2.428 1.382a.265.265 0 0 0-.17-.067z"
+                                        opacity="1" data-original="#000000"></path>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+    
+                <div id="personalDetails" class="package-tab-content md:p-8 p-5 hidden">
+                    <div class="grid md:grid-cols-2 grid-cols-1 gap-5 mb-5">
+                        <div>
+                            <label for="name" class="text-sm text-[#4A535F] dark:text-[#909ca3] font-medium">Full Name
+                                / &#2474;&#2497;&#2480;&#2507; &#2472;&#2494;&#2478;<span class="text-[#FF434E]">*</span></label>
+                            <input type="text" id="fname" name="fname"
+                                class="w-full outline-none px-5 py-4 text-[#A2A5AE] text-sm border border-[#ebebf3] dark:border-gray-700 rounded-xl mt-2 bg-transparent dark:bg-[#232339]"
+                                required />
+                                <!-- <small class="text-danger" id="name-error" style="display: none;"></small> -->
+                        </div>
+                        <div>
+                            <label for="email" class="text-sm text-[#4A535F] dark:text-[#909ca3] font-medium">E-mail
+                                &#2439;-&#2478;&#2503;&#2439;&#2482; <span class="text-[#FF434E]">*</span></label>
+                            <input type="email" id="email" name="email"
+                                class="w-full outline-none px-5 py-4 text-[#A2A5AE] text-sm border border-[#ebebf3] dark:border-gray-700 rounded-xl mt-2 bg-transparent dark:bg-[#232339]"
+                                required />
+                                <!-- <small class="text-danger" id="email-error" style="display: none;"></small> -->
+                        </div>
+                        <div>
+                            <label for="mobile" class="text-sm text-[#4A535F] dark:text-[#909ca3] font-medium">Mobile No
+                                / &#2478;&#2507;&#2476;&#2494;&#2439;&#2482; &#2472;&#2478;&#2509;&#2476;&#2480;<span class="text-[#FF434E]">*</span></label>
+                            <input type="tel" id="mobile" name="mobile"
+                                class="w-full outline-none px-5 py-4 text-[#A2A5AE] text-sm border border-[#ebebf3] dark:border-gray-700 rounded-xl mt-2 bg-transparent dark:bg-[#232339]"
+                                required />
+                                <!-- <small class="text-danger" id="mobile-error" style="display: none;"></small> -->
+                        </div>
+                        <div>
+                            <label for="phone" class="text-sm text-[#4A535F] dark:text-[#909ca3] font-medium">Phone
+                                No / &#2475;&#2507;&#2472; &#2472;&#2478;&#2509;&#2476;&#2480; </label>
+                            <input type="tel" id="phone" name="phone"
+                                class="w-full outline-none px-5 py-4 text-[#A2A5AE] text-sm border border-[#ebebf3] dark:border-gray-700 rounded-xl mt-2 bg-transparent dark:bg-[#232339]" />
+                        </div>
+                        
+                        <div>
+                            <label for="nid" class="text-sm text-[#4A535F] dark:text-[#909ca3] font-medium">NID
+                                No </label>
+                                
+                                
+                                 
+                                    <input type="tel" id="nid" name="nid"
+                                        class="w-full outline-none px-5 py-4 text-[#A2A5AE] text-sm border border-[#ebebf3] dark:border-gray-700 rounded-xl mt-2 bg-transparent dark:bg-[#232339]" />
+                                
+                            
+                                <input id="nidval" type="hidden" value=""/>
+                                <!-- <small class="text-danger" id="nid-error" style="display: none;"></small> -->
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="flex flex-wrap items-center justify-between gap-5 mt-5">
+                        <div>
+                            <p class="text-sm text-[#4A535F] dark:text-[#909ca3] mb-1">Please verify your mobile.</p>
+                            <!-- <h4 class="text-[#4A535F] dark:text-[#909ca3] font-medium">0123 54665 556</h4> -->
+                        </div>
+                        <button type="button" name="mob-verify"  id="mob-verify"
+                            class="px-8 py-3 text-[#00C968] font-semibold rounded-lg border border-[#a6ecca] dark:border-[#546a5f] active:scale-95 transition-all duration-300">Verify
+                            Mobile</button>
+                    </div>
+                    <div class="col-md-12 mb-1 " id="otp-info">
+                        <p class="text-sm text-[#4A535F] dark:text-[#909ca3] mb-1" id="otp-info-msg">Please check your SMS for OTP.</p>
+                    </div>
+                    <div class="flex flex-wrap items-center justify-between gap-5 mt-5" id="otp-ver-div">
+                        <div>
+                            <input type="tel" maxlength="6"  tabindex="2" id="otp" name="otp"  placeholder="Enter OTP" 
+                                class="w-full outline-none px-5 py-4 text-[#A2A5AE] text-sm border border-[#ebebf3] dark:border-gray-700 rounded-xl mt-2 bg-transparent dark:bg-[#232339]" />
+                        </div>
+                        <button type="button" id='verify-otp' name='verify-otp'
+                            class="verify-otp px-8 py-3 text-[#00C968] font-semibold rounded-lg border border-[#a6ecca] dark:border-[#546a5f] active:scale-95 transition-all duration-300">Verify
+                            OTP</button>
+                    </div>
+                    
+                    <div class="flex justify-between items-center" id="submit-new-customer">
+                        
+                    </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+        
+    
+    <script src="../resources/newCustom/libs/jquery-validation/dist/jquery.validate.min.js"></script>
+    
+    <script>
+    
+        $('.details-wiz').on('click', function(){
+            console.log($(this).data('tab'))
+            
+            if($(this).data('tab')==="personalDetails"){
+                let count = 0;
+                if ($('#package').val()<=1)      { $('#packId-error').show(); count++} else $('#packId-error').hide(); 
+                if ($('#location').val()<=0)     { $('#location-error').text('Please Select your Location'); $('#location-error').show(); count++; } else $('#location-error').hide();
+                if ($('#apt').val().length<=0)   { $('#apt-error').text('Apt No is required'); $('#apt-error').show(); count++; } else $('#apt-error').hide();
+                if ($('#house').val().length<=0) { $('#house-error').text('House No is required'); $('#house-error').show(); count++; } else $('#house-error').hide();
+                if ($('#road').val().length<=0)  { $('#road-error').text('Road No is required'); $('#road-error').show(); count++; } else $('#road-error').hide();
+                if ($('#area').val().length<=0)  { $('#area-error').text('Area is required'); $('#area-error').show(); count++; } else $('#area-error').hide();
+                
+                if(count > 0)
+                    return false;
+            }
+            // Hide all tabs
+            document.querySelectorAll('.package-tab-content').forEach(tab => {
+                tab.classList.add('hidden');
+            });
+            
+            // Remove active class from all tab buttons
+            document.querySelectorAll('.package-tab-button').forEach(button => {
+                button.classList.remove('active');
+            });
+    
+            // Show the selected tab
+            document.getElementById($(this).data('tab')).classList.remove('hidden');
+    
+             // Add active class to the clicked tab button
+            $('#'+$(this).data('tab')+'-btn').addClass('active')
+        })
+    </script>
+    
+    
+    
+    <script type="text/javascript" language="javascript">
+    
+    $('#packId-error').hide();
+    $('#location-error').hide();
+    $('#apt-error').hide();
+    $('#house-error').hide();
+    $('#road-error').hide();
+    
+    $('#name-error').hide();
+    $('#mobile-error').hide();
+    $('#email-error').hide();
+    $('#nid-error').hide();
+    
+    var nid = "NO";
+    
+    console.log("nid "+nid)
+    
+    var mobileDuplicate = false, emailDuplicate = false;
+    var origin   = "";//
+    $(document).ready(function(){
+        var nullcount = parseInt('');
+        if (nullcount>0) {
+            $('#packId-error').show();
+            $('#location-error').show();
+            $('#apt-error').show();
+            $('#house-error').show();
+            $('#road-error').show();
+    
+            $('#name-error').show();
+            $('#mobile-error').show();
+            $('#email-error').show();
+            $('#nid-error').show();
+        }
+        $("#error-div").hide();
+    
+         
+         $("#location").change(function(){
+             //var origin   = "";//window.location.origin;
+             if($("#location").val()!= 0){
+                 $.ajax({
+                        url: origin+"/customer/getLocation",
+                        data: {"location":$("#location").val()},
+                        type: 'GET',
+                        contentType: 'application/json',
+                        success: function (data, jqXHR) {
+                            //console.log(JSON.stringify(data));
+                            //data = JSON.parse(data);
+                            //console.log(data);
+                            //console.log("=> "+jqXHR.status);
+                            if (data) {// && data.responseCode == 200
+                                //console.log(data.name);
+                                $("#loc").text(data.name+", "+data.thana_NAME+", "+data.dist_NAME);
+                                $("#area").text(data.thana_NAME);
+                                $("#district").text(data.dist_NAME);
+                                
+    
+                            } else {
+                                alert("Sorry !! "+data.msg);
+                                //window.location.replace(/*[[@{/changePlan}]]*/null);
+                            }
+                        },
+                        error: function (e) {
+                            console.log(e);
+                            //bKash.execute().onError();
+                        }
+                    });
+             }else{
+                 alert("Please Select your Location");
+             }
+             
+         });
+         
+         
+         $("#mobile").bind("keyup change",function(){
+             // window.location.origin;
+             console.log("origin: "+origin);
+             if ($('#mobile').val()=='' || $('#mobile').val().length!=11) { $('#mobile-error').show(); return; } else { $('#mobile-error').hide();  }
+             if(checkMobile()){
+                 $.ajax({
+                        url: origin+"/customer/validateMobile",
+                        data: {"mobile":$("#mobile").val()},
+                        type: 'GET',
+                        contentType: 'application/json',
+                        success: function (data, jqXHR) {
+                            //console.log(JSON.stringify(data));
+                            //data = JSON.parse(data);
+                            //console.log("statusCode "+data.statusCode);
+                            //console.log("=> "+jqXHR.status);
+                            if (data.statusCode == "202") {// && data.responseCode == 200
+                                //console.log(data.name);
+                                $("#mobile-error").text(data.msg);
+                                $("#mobile-error").addClass("text-success");
+                                $("#mobile-error").removeClass("text-danger");
+                                //$("#form-submit").prop('disabled', true);
+                                mobileDuplicate = true;
+                            } else {
+                                $("#mobile-error").text(data.msg);
+                                $("#mobile-error").removeClass("text-success");
+                                $("#mobile-error").addClass("text-danger");
+                                //$("#form-submit").prop('disabled', false);
+                                mobileDuplicate = false;
+                            }
+                            $("#mobile-error").show();
+                        },
+                        error: function (e) {
+                            console.log(e);
+                            //bKash.execute().onError();
+                        }
+                    });
+             }else{
+                 //alert("Please Select your Location");
+             }
+             
+         })
+         
+         $("#email").bind("keyup change",function(){
+             //var origin   = window.location.origin;
+             if ($('#email').val()=='') { $('#email-error').show(); return; } else $('#email-error').hide();
+             if(validateEmailAddress()){
+                 $.ajax({
+                        url: origin+"/customer/validateEmail",
+                        data: {"email":$("#email").val()},
+                        type: 'GET',
+                        contentType: 'application/json',
+                        success: function (data, jqXHR) {
+    
+                            //console.log("statusCode "+data.statusCode);
+                            //console.log("=> "+jqXHR.status);
+                            if (data.statusCode == "202") {// && data.responseCode == 200
+                                //console.log(data.name);
+                                $("#email-error").text(data.message);
+                                $("#email-error").addClass("text-success");
+                                $("#email-error").removeClass("text-danger");
+                                //$("#form-submit").prop('disabled', true);
+                                emailDuplicate = true;
+    
+                            } else {
+                                $("#email-error").text(data.message);
+                                $("#email-error").removeClass("text-success");
+                                $("#email-error").addClass("text-danger");
+                                //$("#form-submit").prop('disabled', false);
+                                emailDuplicate = false;
+                            }
+                            $("#email-error").show();
+                        },
+                        error: function (e) {
+                            console.log(e);
+                            //bKash.execute().onError();
+                        }
+                    });
+             }else{
+                 //alert("Please Select your Location");
+             }
+             
+         })
+         
+        $("#msform").validate({
+          invalidHandler: function(event, validator) {
+            // 'this' refers to the form
+            //console.log("@error validation");
+            var errors = validator.numberOfInvalids();
+            if (errors) {
+              var message = errors == 1
+                ? 'You missed 1 field. It has been highlighted'
+                : 'You missed ' + errors + ' fields. They have been highlighted';
+              $("div.error span").html(message);
+              $("div.error").show();
+            } else {
+              $("div.error").hide();
+            }
+          }
+        });
+         
+         $("#otp-ver-div").hide();
+         $("#otp-info").hide();
+         $("#mob-verify").click(function(){
+             $("#mob-verify").attr("disabled", "disabled");
+            if ($('#fname').val()=='') { $('#name-error').show(); return; } else $('#name-error').hide();
+            if ($('#mobile').val()=='' || $('#mobile').val().length!=11) { $('#mobile-error').show(); return; } else { $('#mobile-error').hide();  }
+            if ($('#email').val()=='') { $('#email-error').show(); return; } else $('#email-error').hide();
+            if (checkForm()==false) { return; }
+    
+            var salesQueryObj = new Object();
+            salesQueryObj.sqLocation = $('#location').val();
+            salesQueryObj.plan = $('#package').val();
+            salesQueryObj.cpProduct = $('#router').val();
+            salesQueryObj.cpProduct2 = $('#ipPhone').val();
+            salesQueryObj.address = "Apartment "+$('#apt').val()+", House "+$('#house').val()+", Road "+$('#road').val()+", Area "+$('#area').val();
+            salesQueryObj.house = $('#house').val();
+            salesQueryObj.road = $('#road').val();
+            salesQueryObj.apt = $('#apt').val();
+            salesQueryObj.area = $('#area').val();
+            salesQueryObj.remarks = $('#landmark').val();
+            salesQueryObj.name = $('#fname').val();
+            salesQueryObj.mobile = $('#mobile').val();
+            salesQueryObj.mobile2 = $('#phone').val();
+            salesQueryObj.email = $('#email').val();
+            salesQueryObj.nid = $('#nid').val();
+            if(nid === "YES" & $('#nid').val() == ''){
+                alert("NID is not provided")
+                return false;
+            }
+            var salesQuery = JSON.stringify(salesQueryObj);
+            
+             //var origin   = window.location.origin;
+             if(validateEmailAddress()){
+                 $.ajax({
+                        url: origin+"/customer/verifyMobile",
+                        data: {"mobile":$("#mobile").val(), "salesQuery": salesQuery},
+                        type: 'GET',
+                        contentType: 'application/json',
+                        success: function (data, jqXHR) {
+                            //var jData = JSON.parse(data)
+                            console.log("mob veri -> statusCode "+data);
+                            //console.log("=> "+jqXHR.status);
+                            if (data.statusCode == 200) {// && data.responseCode == 200
+                                //console.log(data.name);
+                                $("#otp-info-msg").text(data.msg);
+                                $("#otp-info").show();
+                                $("#otp-div").empty();
+                                $("#otp-ver-div").show();
+                                                    
+            
+                            }
+                            if (data.statusCode == 202) {// && data.responseCode == 200
+                                //console.log(data.name);
+                                $("#otp-info-msg").text(data.msg);
+                                $("#otp-info").show();
+                                $("#otp-div").empty();
+                                $("#otp-ver-div").show();
+                                                    
+    
+                            } else {
+                                $("#otp-info-msg").text(data.msg);
+                                $("#otp-info").show();
+                            }
+                        },
+                        error: function (e) {
+                            console.log(e);
+                            $("#otp-info-msg").text("Sorry Something Went Wrong!!");
+                            $("#otp-info").show();
+                        }
+                    });
+             }else{
+                 //alert("Please Select your Location");
+             }
+             
+         });
+         
+         $(".verify-otp").click(function(){
+            // var origin   = window.location.origin;
+            $(".verify-otp").attr("disabled", "disabled");
+             console.log(".verify-otp")
+             if(validateEmailAddress()){
+                 $.ajax({
+                        url: origin+"/customer/verifyMobileOTP",
+                        data: {"otp":$("#otp").val(), "mobile":$("#mobile").val()},
+                        type: 'GET',
+                        contentType: 'application/json',
+                        success: function (data, jqXHR) {
+                            //var jData = JSON.parse(data)
+                            console.log("verify otp statusCode "+data.statusCode);
+                            //console.log("=> "+jqXHR.status);
+                            if (data.statusCode == 200) {// && data.responseCode == 200
+                                //console.log(data.name);
+                                $("#otp-info-msg").text(data.msg);
+                                if(!sbt){
+                                    
+                                    var sbtn= '<button type="submit" id="form-submit" class="md:px-12 px-8 py-3 mt-6 bg-[#7674F8] text-white font-semibold rounded-xl active:scale-95 transition-all duration-300">Submit</button>';
+                                    $("#submit-new-customer").append(sbtn);
+                                    sbt = true;
+                                }
+    
+                            } else {
+                                $("#otp-info-msg").text(data.msg);
+                                $("#otp-info").show();
+                                $(".submit-btn").empty();
+                            }
+                        },
+                        error: function (e) {
+                            console.log(e);
+                            $("#otp-info-msg").text("Sorry Something Went Wrong!!");
+                            $("#otp-info").show();
+                        }
+                    });
+             }else{
+                 //alert("Please Select your Location");
+             }
+             
+         });
+    
+     });
+    
+    /*====================================*/
+    
+    var sbt = false;
+    var verMetod = "";
+    console.log("VERIFICATION_METHOD = "+verMetod);
+    if(verMetod === "CAPTCHA"){
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.scrollTop; //force css repaint to ensure cssom is ready
+    
+            var timeout; //global timout variable that holds reference to timer
+    
+            var captcha = new $.Captcha({
+                onFailure: function() {
+                    
+                    $(".captcha-chat .wrong").show({
+                        duration: 30,
+                        done: function() {
+                            //console.log("Captcha Fail");
+                            $(".wrong").text("Validation Failed please try again");
+                            $(".wrong").addClass("text-danger")
+                            var that = this;
+                            clearTimeout(timeout);
+                            $(this).removeClass("shake");
+                            $(this).css("animation");
+                            //Browser Reflow(repaint?): hacky way to ensure removal of css properties after removeclass
+                            $(this).addClass("shake");
+                            var time = parseFloat($(this).css("animation-duration")) * 1000;
+                            timeout = setTimeout(function() {
+                                $(that).removeClass("shake");
+                                $(".wrong").removeClass("text-danger");
+                            }, time);
+                        }
+                    
+                    
+                    });
+                    $(".submit-btn").empty();
+                },
+    
+                onSuccess: function() {
+                    console.log("captcha Success");
+                    $(".wrong").text("");
+                    
+                    if(!sbt){
+                        var sbtn= "<input type='submit' class='btn btn-success w-100' id='form-submit' value='Submit'>";
+                        $(".submit-btn").append(sbtn);
+                        sbt = true;
+                    }
+                }
+            });
+    
+            captcha.generate();
+        });
+       
+    } 
+        /*====================================================*/
+    
+                function checkForm(){
+                    var result = false, mobResult=false, eResult = false;
+                    var errCount=0; var errRet;
+                    
+                    // Checking mobile
+                    mobResult = checkMobile();
+                    
+                    eResult = validateEmailAddress();
+                    
+                    $("#error-log").empty();
+                    
+                    if($("#location").val()==0){
+                        //$("#error-log").append("<li>Please Select your Location.</li>");
+                        $("#location-error").text("Please Select your Location.");
+                        errCount += 1;
+                    }
+                    
+                    //var errEle = '<ul id="error-log" class="bg-danger border rounded text-light">';
+                    
+                    errCount += checkName("name-error"); 
+                    
+                    errCount += checkApartment("apt-error");
+                    
+                    errCount += checkHouseNo("house-error");
+                    
+                    errCount += checkRoadNo("road-error");
+                    
+                    var nidval = $('#nidval').val();
+                    if (nidval!=null && (nidval=="YES" || nidval=="1")) {
+                        errCount += checkNID("nid-error");
+                    }
+                    
+                    console.log("error element : "+errCount);
+                    //err-count += checkName(err-ele);
+                    $("#error-div").show();
+                    if(errCount == 0)
+                        $("#error-div").hide();
+                    else
+                        $("#error-log").append("<li>Please Correct the errors.</li>");
+                    
+                    
+                    //alert("mobResult "+mobResult+" eResult "+eResult+"error count : email "+emailDuplicate+" mobile : "+mobileDuplicate);
+                    if(mobResult && eResult && errCount==0 && emailDuplicate && mobileDuplicate){
+                        console.log("return : "+true);
+                        return true;
+                    }else{
+                        console.log("return : "+false);
+                        return false;
+                    }
+                }
+                
+                function checkMobile(){
+                    var value = $("#mobile").val();
+                    
+                    var result = false;
+                    
+                    //console.log("mobile "+$("#mobile").val()+" phone "+$("#phone").val());
+                    
+                    $("#mobile-error").text("");
+                    $("#mobile-error").show();
+                    if ($("#mobile").val().length != 11) {
+                        $("#mobile-error").text("Mobile number should be 11 digit");
+                        $("#mobile-error").removeClass("text-success");
+                        $("#mobile-error").addClass("text-danger");
+                        result = false // keep form from submitting
+                    }else{
+                        //console.log("Starts res 0: ");
+                        if($("#mobile").val().startsWith(0)){
+                            //console.log("validation res : ");
+                            if(!/^[0-9]+$/.test(value)){
+                                //inputtxt.value = '';
+                                $("#mobile-error").text("Please only enter numeric characters only! (Allowed input:0-9)");
+                                $("#mobile-error").removeClass("text-success");
+                                $("#mobile-error").addClass("text-danger");
+                                result = false;
+                              }else{ 
+                                  $("#mobile-error").text("");
+                                  result = true;
+                              }
+    
+                        }else{
+                            
+                            $("#mobile-error").text("Mobile number starts with 01; eg : 01xxxxxxxxx");
+                            $("#mobile-error").removeClass("text-success");
+                            $("#mobile-error").addClass("text-danger");
+                            result = false;	
+                        }
+                            
+                        console.log("Starts res 0ut: ");
+                        
+                    }
+                    console.log("Starts res 0ut final: ");
+                    
+                    
+                    return result;
+                }
+    
+                function validateEmailAddress(){
+                    
+                    var email = $("#email").val();
+                    //console.log("Validating Email address "+email);
+                    
+                    $("#email-error").text("");
+                    $("#email-error").show();
+                    var result = false, result1 = false, result2 = false;
+                    if(email != '' && email != null){
+                        
+                        if(validateEmail(email) == false){
+                            $("#email-error").text("Invalid Email address !!");
+                            //form1.email.style.backgroundColor=red;
+                            //form1.email.focus();
+                            $("#email-error").removeClass("text-success");
+                            $("#email-error").addClass("text-danger");
+                            //console.log("Validating Email address FALSE ");
+                            result1 = false;
+                        }else{ 
+                            $("#email-error").text("");
+                            //console.log("Validating Email address TRUE ");
+                            result1 = true;
+                        }
+                
+                        if( ! validateText(email, "Email",5)) {
+                            //form1.email.focus();
+                            //console.log("Validating Email address FALSE ");
+                            $("#email-error").removeClass("text-success");
+                            $("#email-error").addClass("text-danger");
+                            result2=false;
+                        }else{ 
+                            $("#email-error").text("");
+                            //console.log("Validating Email address TRUE ");
+                            result2 = true;
+                        }
+                        
+                        //console.log("Validating Email address "+result1+" "+result2);
+                        if(result1 && result2)
+                            return true;
+                        else
+                            return false;
+                
+                        
+                    }else{
+                        $("#email-error").text("Please Provide your Email Address");
+                        //form1.email.style.backgroundColor=red;
+                        //form1.email.focus();
+                        $("#email-error").removeClass("text-success");
+                        $("#email-error").addClass("text-danger");
+                        console.log("Validating Email address FALSE ");
+                        result1 = false;
+                    }
+                }
+                
+                function checkNID(tag) {
+                    if (!validateText($("#nid").val(), "NID", 8, tag)) {        			
+                        return 1;
+                    }
+                    else 
+                        return 0;
+                }
+    
+                function checkName(tag){
+                    //console.log("->checkName");
+                    if( ! validateText($("#fname").val(), "Name",6,tag)){
+                        
+                        return 1;
+                    }else return 0;
+                }
+                
+                function checkApartment(tag){
+                    //console.log("->checkApartment");
+                    if( ! validateText($("#apt").val(), "Apartment No.",1,tag)){
+                        
+                        return 1;
+                    }else return 0;
+                }
+                
+                function checkHouseNo(tag){
+                    //console.log("->checkApartment");
+                    if( ! validateText($("#house").val(), "House No.",1,tag)){
+                        
+                        return 1;
+                    }else return 0;
+                }
+                
+                
+                function checkRoadNo(tag){
+                    //console.log("->checkApartment");
+                    if( ! validateText($("#road").val(), "Road No.",1,tag)){
+                        
+                        return 1;
+                    }else return 0;
+                }
+                
+                function validateEmail(email) {
+                    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                    return re.test(email);
+                }
+                
+                function validateText(text1, name1,minlen,tag){
+                    if(text1.length < minlen){
+                        if(minlen==-1) $("#email-error").text(name1);
+                        else {
+                            var ele = "<li>"+name1+" Must be at least  "+minlen+" characters long"+"</li>";
+                            $("#"+tag).text(name1+" Must be at least  "+minlen+" characters long");
+                            $("#"+tag).show();
+                            //$("#error-log").append(ele);
+                            //console.log("error element : "+ele);
+                            return false;
+                           }
+                    }
+                    $("#"+tag).text("");
+                    return true;
+                }
+            </script>
+        
+        <script>
+    
+        
+        $(".submit").click(function(){
+            return false;
+        })
+        
+        //./multi step form end
+            
+        </script>
+    
+    <!-- Footer -->
+        <footer id="pub-footer" class="pt-5 pb-8 flex flex-col gap-1 px-3">
+            <p class="font-semibold text-center text-[#667085] dark:text-[#9caab2] text-sm">© SK Network All rights
+                reserved. Developed by <a href="https://maestro.com.bd/" target="_blank"
+                    class="text-[#7674F8] dark:text-[#7674F8]">Roohweb</a></p>
+            <div class="flex justify-center md:gap-5 gap-3 md:text-sm text-xs text-[#667085] dark:text-[#8b99a2]">
+                <a href="https://sknetwork.net/" target="_blank" class="underline">terms and conditions, </a>
+                <a href="https://sknetwork.net/" target="_blank" class="underline">privacy policy, </a>
+                <a href="https://sknetwork.net/" target="_blank" class="underline">refund & return policy. </a>
+            </div>
+        </footer>
+    
+    </body>
+    </html>
+    
+    <!-- Theme switcher -->
+    <script>
+    //When the user clicks on <span> (x), close the modal
+    $('#mclose').on('click',function() {
+        //$('#myModal').css({ display: "none" });
+          $('#myModal').removeClass('show');
+            //$('#myModal').addClass('hide');
+    })
+        // icons
+        const sunIcon = document.querySelector(".self-light");
+        const moonIcon = document.querySelector(".self-dark");
+    
+        // theme vars
+        const userTheme = localStorage.getItem("theme");
+        const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    
+        // icon toggle
+        const iconToggle = () => {
+            moonIcon.classList.toggle("hidden");
+            sunIcon.classList.toggle("hidden");
+        }
+    
+        // initial theme check
+        const themeCheck = () => {
+            if (userTheme === "dark" || (!userTheme && systemTheme)) {
+                document.documentElement.classList.add("dark");
+                moonIcon.classList.add("hidden");
+                return;
+            }
+            sunIcon.classList.add("hidden");
+        }
+    
+        // manual theme switch
+        const themeSwitch = () => {
+            if (document.documentElement.classList.contains("dark")) {
+                document.documentElement.classList.remove("dark");
+                localStorage.setItem("theme", "light");
+                iconToggle();
+                return;
+            }
+            document.documentElement.classList.add("dark");
+            localStorage.setItem("theme", "dark");
+            iconToggle();
+        }
+    
+        // call theme switch on clicking button
+        sunIcon.addEventListener("click", () => {
+            themeSwitch();
+        })
+        moonIcon.addEventListener("click", () => {
+            themeSwitch();
+        })
+    
+        // invoke theme check on initial load
+        themeCheck();
+    </script>
+    
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+    
+    <!-- Dropdown -->
+    <script>
+        const dropdownBtn = document.getElementById("dropdownBtn");
+        const navDropdown = document.getElementById("navDropdown");
+        const openHamburger = document.getElementById("openHamburger");
+        const closeHamburger = document.getElementById("closeHamburger");
+    
+        dropdownBtn.addEventListener("click", () => {
+            navDropdown.classList.toggle("active");
+            openHamburger.classList.toggle("hidden");
+            closeHamburger.classList.toggle("hidden");
+        });
+    
+        document.addEventListener("click", (event) => {
+            if (!navDropdown.contains(event.target) && !dropdownBtn.contains(event.target)) {
+                navDropdown.classList.remove("active");
+                openHamburger.classList.remove("hidden");
+                closeHamburger.classList.add("hidden");
+            }
+        });
+    </script>
